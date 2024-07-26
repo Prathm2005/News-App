@@ -1,0 +1,53 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>samacharsutra</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <nav>
+    <div class="main-nav container flex">
+      <a href="#" onclick="loadWeb()" class="company-logo">
+        <img src="large.png" alt="news logo" />
+      </a>
+      <div class="nav-links">
+        <ul class="flex">
+          <li class="hover-link nav-item" id="Cricket" onclick="clickItem('Cricket')">CRICKET</li>
+          <li class="hover-link nav-item" id="Finance" onclick="clickItem('Finance')">FINANCE</li>
+          <li class="hover-link nav-item" id="Politics" onclick="clickItem('Politics')">POLITICS</li>
+        </ul>
+      </div>
+      <div class="search-bar flex">
+        <input type="text" class="news-input" id="search-txt" placeholder="Enter the text" />
+        <button class="search-btn" id="search-btn">Search</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="cards-container container flex" id="cards-container"></div>
+  </main>
+
+  <template id="template-news-card">
+    <div class="card">
+      <div class="card-header">
+        <img src="https://via.placeholder.com/400x200" alt="news image" class="news-img" />
+      </div>
+      <div class="card-content">
+        <h3 class="news-title">This is the title</h3>
+        <h6 class="news-source">Source</h6>
+        <p class="news-disc">Description</p>
+      </div>
+    </div>
+  </template>
+  <a href="#" class="back-top">
+    <img src="arrow2.png" alt="Back to top" />
+  </a>
+  <script src="project.js"></script>
+</body>
+</html>
